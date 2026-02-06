@@ -85,10 +85,35 @@ const DOCS = [
 ];
 
 const VERSIONS = [
-  { ver: "3.0", date: "2025-12-01", author: "张三", change: "全面修订入职流程，新增电子签章环节", status: "published" },
-  { ver: "2.1", date: "2025-08-15", author: "张三", change: "优化体检环节说明", status: "archived" },
-  { ver: "2.0", date: "2025-03-01", author: "李四", change: "增加远程入职流程", status: "archived" },
-  { ver: "1.0", date: "2024-06-01", author: "李四", change: "初始版本发布", status: "archived" },
+  { ver: "3.0", date: "2025-12-01", author: "张三", change: "全面修订入职流程，新增电子签章环节", status: "published",
+    chapters: [
+      { title: "第一章 总则", content: "1.1 为规范公司员工入职管理，保障公司及员工合法权益，特制定本办法。\n1.2 本办法适用于公司所有新入职员工（含正式员工、实习生、外包人员）。\n1.3 人力资源部为入职管理的主责部门，各业务部门应予以配合。" },
+      { title: "第二章 入职条件", content: "2.1 应聘者须通过公司面试流程并获得录用通知。\n2.2 入职前须完成体检（线上/线下均可）并上传电子版报告。\n2.3 须提供身份证、学历证书、离职证明等材料的电子扫描件。\n2.4 背景调查结果须符合公司用人标准。" },
+      { title: "第三章 入职流程", content: "3.1 HR 发起入职流程，系统自动创建入职任务单。\n3.2 HR 系统化审核入职材料（增加自动校验）。\n3.3 电子 Offer 签章（集成电子签章平台）。\n3.4 完成背景调查（学历验证、前雇主背调）。\n3.5 HR 主管审批确认。\n3.6 安排入职培训、开通邮箱、门禁、OA 系统等。\n3.7 签订劳动合同（电子签章）。" },
+      { title: "第四章 培训安排", content: "4.1 新员工入职首日须参加公司文化培训（线上/线下）。\n4.2 入职一周内完成部门业务培训。\n4.3 试用期内须完成必修课程学习并通过考核。" },
+      { title: "第五章 附则", content: "5.1 本办法自 2026 年 1 月 1 日起施行。\n5.2 本办法由人力资源部负责解释和修订。\n5.3 远程入职特殊流程说明：远程入职员工可通过视频方式完成身份核验，材料通过邮寄或电子方式提交。" },
+    ]},
+  { ver: "2.1", date: "2025-08-15", author: "张三", change: "优化体检环节说明", status: "archived",
+    chapters: [
+      { title: "第一章 总则", content: "1.1 为规范公司员工入职管理，保障公司及员工合法权益，特制定本办法。\n1.2 本办法适用于公司所有新入职员工（含正式员工、实习生、外包人员）。\n1.3 人力资源部为入职管理的主责部门，各业务部门应予以配合。" },
+      { title: "第二章 入职条件", content: "2.1 应聘者须通过公司面试流程并获得录用通知。\n2.2 入职前须完成线下体检并提交纸质报告。\n2.3 须提供身份证、学历证书、离职证明等材料原件及复印件。\n2.4 背景调查结果须符合公司用人标准。" },
+      { title: "第三章 入职流程", content: "3.1 HR 发起入职流程。\n3.2 HR 人工审核入职材料。\n3.3 纸质 Offer 签署。\n3.4 完成背景调查。\n3.5 HR 主管审批确认。\n3.6 安排入职培训、开通系统账号。\n3.7 签订纸质劳动合同。" },
+      { title: "第四章 培训安排", content: "4.1 新员工入职首日须参加公司文化培训。\n4.2 入职一周内完成部门业务培训。\n4.3 试用期内须完成必修课程学习并通过考核。" },
+      { title: "第五章 附则", content: "5.1 本办法自 2025 年 9 月 1 日起施行。\n5.2 本办法由人力资源部负责解释和修订。" },
+    ]},
+  { ver: "2.0", date: "2025-03-01", author: "李四", change: "增加远程入职流程", status: "archived",
+    chapters: [
+      { title: "第一章 总则", content: "1.1 为规范公司员工入职管理，特制定本办法。\n1.2 本办法适用于公司所有新入职正式员工。\n1.3 人力资源部为入职管理的主责部门。" },
+      { title: "第二章 入职条件", content: "2.1 应聘者须通过面试并获得录用通知。\n2.2 入职前须完成线下体检并提交报告。\n2.3 须提供身份证、学历证书等材料原件。" },
+      { title: "第三章 入职流程", content: "3.1 HR 发起入职流程。\n3.2 HR 人工审核入职材料。\n3.3 纸质 Offer 签署。\n3.4 安排入职培训。\n3.5 签订劳动合同。" },
+      { title: "第四章 附则", content: "4.1 本办法自 2025 年 4 月 1 日起施行。\n4.2 本办法由人力资源部负责解释。" },
+    ]},
+  { ver: "1.0", date: "2024-06-01", author: "李四", change: "初始版本发布", status: "archived",
+    chapters: [
+      { title: "第一章 总则", content: "1.1 为规范入职管理，特制定本办法。\n1.2 适用于全体新入职员工。" },
+      { title: "第二章 入职流程", content: "2.1 提交入职材料。\n2.2 HR 审核。\n2.3 签署劳动合同。\n2.4 安排工位与设备。" },
+      { title: "第三章 附则", content: "3.1 本办法自 2024 年 7 月 1 日起施行。" },
+    ]},
 ];
 
 const AUDIT_LOG = [
@@ -640,6 +665,7 @@ const DetailPage = ({ doc, onBack }) => {
   const [showPublish, setShowPublish] = useState(false);
   const [showDiff, setShowDiff] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [viewingVersion, setViewingVersion] = useState(null);
   if (!doc) return null;
   const st = STATUS_MAP[doc.status];
   return (
@@ -694,31 +720,109 @@ const DetailPage = ({ doc, onBack }) => {
       )}
 
       {tab === 1 && (
-        <Card style={{ padding: 20 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-            <span style={{ fontWeight: 600, fontSize: 15 }}>版本历史</span>
-            <Btn small ghost onClick={() => setShowDiff(true)} icon={Icons.copy({ size: 14, color: C.primary })}>版本对比</Btn>
-          </div>
-          <div style={{ position: "relative", paddingLeft: 24 }}>
-            <div style={{ position: "absolute", left: 7, top: 4, bottom: 4, width: 2, background: C.border }} />
-            {VERSIONS.map((v, i) => (
-              <div key={i} style={{ position: "relative", paddingBottom: 24 }}>
-                <div style={{ position: "absolute", left: -20, top: 4, width: 12, height: 12, borderRadius: "50%", background: i === 0 ? C.primary : C.border, border: `2px solid ${C.white}` }} />
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <div>
+          {!viewingVersion ? (
+            <Card style={{ padding: 20 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                <span style={{ fontWeight: 600, fontSize: 15 }}>版本历史</span>
+                <Btn small ghost onClick={() => setShowDiff(true)} icon={Icons.copy({ size: 14, color: C.primary })}>版本对比</Btn>
+              </div>
+              <div style={{ position: "relative", paddingLeft: 24 }}>
+                <div style={{ position: "absolute", left: 7, top: 4, bottom: 4, width: 2, background: C.border }} />
+                {VERSIONS.map((v, i) => {
+                  const [hov, setHov] = useState(false);
+                  return (
+                    <div key={i} style={{ position: "relative", paddingBottom: 24 }}>
+                      <div style={{ position: "absolute", left: -20, top: 4, width: 12, height: 12, borderRadius: "50%", background: i === 0 ? C.primary : C.border, border: `2px solid ${C.white}` }} />
+                      <div
+                        onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+                        onClick={() => setViewingVersion(v)}
+                        style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "10px 14px", borderRadius: 8, cursor: "pointer", background: hov ? "#f6f8fa" : "transparent", border: `1px solid ${hov ? C.border : "transparent"}`, transition: "all .2s" }}
+                      >
+                        <div style={{ flex: 1 }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                            <span style={{ fontWeight: 600, fontSize: 14 }}>v{v.ver}</span>
+                            <Badge color={i === 0 ? C.success : C.textTertiary} bg={i === 0 ? C.tagGreen : "#f5f5f5"}>{i === 0 ? "当前版本" : "已归档"}</Badge>
+                          </div>
+                          <div style={{ fontSize: 13, color: C.textSecondary, marginTop: 4 }}>{v.change}</div>
+                          <div style={{ fontSize: 12, color: C.textTertiary, marginTop: 6, display: "flex", gap: 16 }}>
+                            <span>共 {v.chapters?.length || 0} 章</span>
+                            <span>{v.author}</span>
+                            <span>{v.date}</span>
+                          </div>
+                        </div>
+                        <div style={{ display: "flex", alignItems: "center", gap: 6, color: hov ? C.primary : C.textTertiary, fontSize: 13, whiteSpace: "nowrap", paddingTop: 4 }}>
+                          {Icons.eye({ size: 14, color: hov ? C.primary : C.textTertiary })}
+                          <span>查看全文</span>
+                          {Icons.chevRight({ size: 14, color: hov ? C.primary : C.textTertiary })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </Card>
+          ) : (
+            /* ── Version detail view ── */
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, cursor: "pointer", color: C.textSecondary }} onClick={() => setViewingVersion(null)}>
+                {Icons.arrowLeft({ size: 18 })} <span style={{ fontSize: 14 }}>返回版本列表</span>
+              </div>
+              <Card style={{ padding: 24 }}>
+                {/* version header */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", paddingBottom: 20, borderBottom: `1px solid ${C.border}`, marginBottom: 20 }}>
                   <div>
-                    <span style={{ fontWeight: 600, fontSize: 14 }}>v{v.ver}</span>
-                    <Badge color={i === 0 ? C.success : C.textTertiary} bg={i === 0 ? C.tagGreen : "#f5f5f5"} style={{ marginLeft: 8 }}>{i === 0 ? "当前版本" : "已归档"}</Badge>
-                    <div style={{ fontSize: 13, color: C.textSecondary, marginTop: 4 }}>{v.change}</div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                      <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{doc.title}</h3>
+                      <Badge color={viewingVersion === VERSIONS[0] ? C.success : C.textTertiary} bg={viewingVersion === VERSIONS[0] ? C.tagGreen : "#f5f5f5"}>
+                        {viewingVersion === VERSIONS[0] ? "当前版本" : "已归档"}
+                      </Badge>
+                    </div>
+                    <div style={{ display: "flex", gap: 20, fontSize: 13, color: C.textTertiary }}>
+                      <span>版本: v{viewingVersion.ver}</span>
+                      <span>发布日期: {viewingVersion.date}</span>
+                      <span>编辑人: {viewingVersion.author}</span>
+                      <span>变更说明: {viewingVersion.change}</span>
+                    </div>
                   </div>
-                  <div style={{ textAlign: "right", fontSize: 12, color: C.textTertiary }}>
-                    <div>{v.date}</div>
-                    <div>{v.author}</div>
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <Btn small ghost icon={Icons.download({ size: 14, color: C.primary })}>导出 PDF</Btn>
+                    {viewingVersion !== VERSIONS[0] && (
+                      <Btn small ghost icon={Icons.copy({ size: 14, color: C.primary })} onClick={() => setShowDiff(true)}>与当前版本对比</Btn>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Card>
+                {/* table of contents */}
+                <div style={{ display: "flex", gap: 24 }}>
+                  <div style={{ width: 200, flexShrink: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: C.textSecondary, marginBottom: 10, padding: "0 8px" }}>目录</div>
+                    {viewingVersion.chapters?.map((ch, ci) => (
+                      <div key={ci}
+                        onClick={() => { const el = document.getElementById(`chapter-${ci}`); el?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                        style={{ padding: "8px 12px", fontSize: 13, color: C.textSecondary, cursor: "pointer", borderLeft: `2px solid ${C.border}`, borderRadius: 0, marginBottom: 2, transition: "all .15s" }}
+                        onMouseEnter={e => { e.currentTarget.style.borderLeftColor = C.primary; e.currentTarget.style.color = C.primary; e.currentTarget.style.background = "#f0f5ff"; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderLeftColor = C.border; e.currentTarget.style.color = C.textSecondary; e.currentTarget.style.background = "transparent"; }}
+                      >
+                        {ch.title}
+                      </div>
+                    ))}
+                  </div>
+                  {/* chapter content */}
+                  <div style={{ flex: 1, borderLeft: `1px solid ${C.border}`, paddingLeft: 24 }}>
+                    {viewingVersion.chapters?.map((ch, ci) => (
+                      <div key={ci} id={`chapter-${ci}`} style={{ marginBottom: 28 }}>
+                        <h4 style={{ margin: "0 0 12px", fontSize: 16, fontWeight: 600, color: C.textPrimary, paddingBottom: 8, borderBottom: `1px solid ${C.border}` }}>{ch.title}</h4>
+                        {ch.content.split("\n").map((line, li) => (
+                          <p key={li} style={{ fontSize: 14, lineHeight: 1.9, color: C.textSecondary, margin: "0 0 6px", paddingLeft: line.match(/^\d/) ? 0 : 16 }}>{line}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </div>
+          )}
+        </div>
       )}
 
       {tab === 2 && (
